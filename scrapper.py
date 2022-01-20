@@ -15,7 +15,7 @@ def get_text(url):
         if(len(raw_text) >= 200):
             text += raw_text + ' '
     text = text.replace(".", " ")
-    return " ".join(re.sub("[^A-Za-z0-9]+", "", text).split())
+    return " ".join(re.sub("[^A-Za-z0-9]+", " ", text).split())
 
 def save_to_file(content, filename):
     filename = filename.replace(' ', '-').lower() + '.txt'

@@ -19,7 +19,7 @@ def get_text(url):
 
 def save_to_file(content, filename):
     filename = filename.replace(' ', '-').lower() + '.txt'
-    with open(filename, 'w') as file:
+    with open(filename, 'w', encoding='utf-8') as file:
         file.write(content)
 
 
